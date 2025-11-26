@@ -1,40 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Wealth∞Wealth | AI Trading Engine</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wealth ∞ Wealth - AI Trading Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- iOS-style Lock Screen Hero Section -->
+    <section class="hero-lockscreen">
+        <div class="background-image"></div>
+        <div class="glass-overlay"></div>
+        
+        <div class="lock-content">
+            <div class="time-display">
+                <div class="time" id="currentTime">10:19</div>
+                <div class="date" id="currentDate">Wed 26 Nov</div>
+            </div>
+            
+            <div class="hero-card glass-card">
+                <div class="logo-section">
+                    <div class="logo">∞</div>
+                    <h1>Wealth<span class="highlight">8</span>Wealth</h1>
+                </div>
+                <p class="tagline">AI-Powered Wealth Intelligence Platform</p>
+                <p class="subtitle">Institutional-grade precision for retail traders</p>
+                <div class="cta-buttons">
+                    <button class="btn-primary glass-btn">Start Free Trial</button>
+                    <button class="btn-secondary glass-btn">Learn More</button>
+                </div>
+            </div>
 
-        <style>
-            /* ==== Global Reset ==== */
-                * {
-                      margin: 0;
-                            padding: 0;
-                                  box-sizing: border-box;
-                                      }
+            <div class="swipe-indicator">
+                <div class="swipe-bar"></div>
+                <p>Swipe up to explore</p>
+            </div>
+        </div>
+    </section>
 
-                                          body {
-                                                height: 100vh;
-                                                      background: radial-gradient(circle at 50% 30%, #0a0a0a, #000);
-                                                            color: #eaeaea;
-                                                                  font-family: 'Poppins', sans-serif;
-                                                                        display: flex;
-                                                                              flex-direction: column;
-                                                                                    align-items: center;
-                                                                                          justify-content: center;
-                                                                                                overflow: hidden;
-                                                                                                    }
+    <!-- Features Section with iOS Cards -->
+    <section class="features-section">
+        <div class="container">
+            <h2 class="section-title">Core Intelligence Features</h2>
+            
+            <div class="feature-grid">
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Alpha Discovery Engine</h3>
+                    <p>AI-powered market analysis identifying high-probability opportunities with institutional precision</p>
+                    <div class="metric">
+                        <span class="metric-value">94.2%</span>
+                        <span class="metric-label">Accuracy Rate</span>
+                    </div>
+                </div>
 
-                                                                                                        h1 {
-                                                                                                              font-size: 3rem;
-                                                                                                                    background: linear-gradient(90deg, #0072ff, #00d4ff, #00ffea);
-                                                                                                                          -webkit-background-clip: text;
-                                                                                                                                -webkit-text-fill-color: transparent;
-                                                                                                                                      text-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-                                                                                                                                            letter-spacing: 1px;
-                                                                                                                                                  margin-bottom: 0.5rem;
-                                                                                                                                                        animation: glow 3s ease-in-out infinite alternate;
-                                                                                                                                                            }
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3>Guards & Audit System</h3>
+                    <p>Real-time risk management with automated position sizing and stop-loss optimization</p>
+                    <div class="metric">
+                        <span class="metric-value">99.8%</span>
+                        <span class="metric-label">Protection Rate</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Lightning Execution</h3>
+                    <p>Zero-latency trade execution with direct market access and smart order routing</p>
+                    <div class="metric">
+                        <span class="metric-value">&lt;10ms</span>
+                        <span class="metric-label">Execution Time</span>
+                    </div>
+                </div>
+
+                <div class="feature-card glass-card">
+                    <div class="feature-icon">📈</div>
+                    <h3>Portfolio Intelligence</h3>
+                    <p>Dynamic portfolio optimization with diversification algorithms and rebalancing automation</p>
+                    <div class="metric">
+                        <span class="metric-value">2.4x</span>
+                        <span class="metric-label">Avg Returns</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security & Trust Section -->
+    <section class="security-section">
+        <div class="container">
+            <h2 class="section-title">Bank-Grade Security</h2>
+            
+            <div class="security-grid">
+                <div class="security-item glass-card">
+                    <div class="security-icon">🔒</div>
+                    <h4>256-bit Encryption</h4>
+                    <p>Military-grade data protection</p>
+                </div>
+
+                <div class="security-item glass-card">
+                    <div class="security-icon">✓</div>
+                    <h4>SEBI Compliant</h4>
+                    <p>Fully regulated operations</p>
+                </div>
+
+                <div class="security-item glass-card">
+                    <div class="security-icon">🏦</div>
+                    <h4>Bank of Baroda Funded</h4>
+                    <p>₹50L institutional backing</p>
+                </div>
+
+                <div class="security-item glass-card">
+                    <div class="security-icon">👁️</div>
+                    <h4>2FA Authentication</h4>
+                    <p>Multi-layer access control</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Metrics -->
+    <section class="metrics-section">
+        <div class="container">
+            <h2 class="section-title">Live Performance Metrics</h2>
+            
+            <div class="metrics-dashboard glass-card">
+                <div class="metric-row">
+                    <div class="metric-box">
+                        <div class="metric-label">Total Returns</div>
+                        <div class="metric-large">+147.3%</div>
+                        <div class="metric-change positive">+12.4% this month</div>
+                    </div>
+                    
+                    <div class="metric-box">
+                        <div class="metric-label">Sharpe Ratio</div>
+                        <div class="metric-large">2.84</div>
+                        <div class="metric-change positive">Above industry avg</div>
+                    </div>
+                    
+                    <div class="metric-box">
+                        <div class="metric-label">Win Rate</div>
+                        <div class="metric-large">78.6%</div>
+                        <div class="metric-change">Consistent performance</div>
+                    </div>
+                </div>
+                
+                <div class="chart-placeholder glass-card">
+                    <p>Portfolio Growth Chart</p>
+                    <div class="chart-visual">
+                        <div class="bar" style="height: 40%"></div>
+                        <div class="bar" style="height: 55%"></div>
+                        <div class="bar" style="height: 48%"></div>
+                        <div class="bar" style="height: 72%"></div>
+                        <div class="bar" style="height: 85%"></div>
+                        <div class="bar" style="height: 100%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card glass-card">
+                <h2>Trade Ahead of the Curve</h2>
+                <p>Join 88 lakh+ investors scaling towards institutional-grade wealth intelligence</p>
+                <div class="cta-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">1.1Cr+</div>
+                        <div class="stat-label">Target Subscribers (Year 5)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">8-10%</div>
+                        <div class="stat-label">Indian Market Share</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50%</div>
+                        <div class="stat-label">MVP Developed</div>
+                    </div>
+                </div>
+                <button class="btn-primary glass-btn large">Start Your Free Trial</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer glass-card">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Wealth8Wealth.com</h4>
+                    <p>By Hay n Zel Funds Pvt Ltd</p>
+                </div>
+                <div class="footer-col">
+                    <h5>Platform</h5>
+                    <ul>
+                        <li><a href="#">Features</a></li>
+                        <li><a href="#">Pricing</a></li>
+                        <li><a href="#">Security</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Compliance</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Legal</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">SEBI Compliance</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Wealth8Wealth. All rights reserved. | SEBI Registered | Bank of Baroda Funded</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Water Droplets Effect -->
+    <canvas id="waterDroplets"></canvas>
+
+    <script src="script.js"></script>
+</body>
+  </html>                                                                                                                                                            }
 
                                                                                                                                                                 @keyframes glow {
                                                                                                                                                                       from { text-shadow: 0 0 10px #00f6ff; }
