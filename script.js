@@ -1,40 +1,83 @@
-// Mobile Menu Toggle
+// Mobile Menu
 const menuToggle = document.getElementById('menuToggle');
-const navLinks = document.getElementById('navLinks');
 
-menuToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-    menuToggle.classList.toggle('active');
+if (menuToggle) {
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+    });
+}
+
+// Smooth Navbar on Scroll
+let lastScroll = 0;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 50) {
+        navbar.style.background = 'rgba(10, 14, 26, 0.85)';
+        navbar.style.boxShadow = '0 4px 24px rgba(0, 0, 0, 0.15)';
+    } else {
+        navbar.style.background = 'rgba(10, 14, 26, 0.72)';
+        navbar.style.boxShadow = 'none';
+    }
+    
+    lastScroll = currentScroll;
+}, { passive: true });
+
+// iOS-style Spring Animation Observer
+const springObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0) scale(1)';
+            }, index * 80);
+        }
+    });
+}, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
 });
 
-// Smooth Scrolling for Navigation Links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-            // Close mobile menu if open
-            navLinks.classList.remove('active');
-            menuToggle.classList.remove('active');
-        }
+// Apply to cards
+document.querySelectorAll('.stat-card, .metric-card, .feature-card, .footer-stat-item').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(20px) scale(0.96)';
+    el.style.transition = 'all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1)';
+    springObserver.observe(el);
+});
+
+// Smooth Button Press Effect (60fps)
+document.querySelectorAll('.btn').forEach(btn => {
+    btn.addEventListener('mousedown', function() {
+        this.style.transition = 'transform 0.1s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        this.style.transform = 'scale(0.95)';
+    });
+    
+    btn.addEventListener('mouseup', function() {
+        this.style.transition = 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        this.style.transform = 'scale(1)';
+    });
+    
+    btn.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1)';
     });
 });
 
-// Navbar Background on Scroll
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.background = 'rgba(10, 14, 26, 0.98)';
-    } else {
-        navbar.style.background = 'rgba(10, 14, 26, 0.95)';
-    }
+// Hardware Acceleration
+document.querySelectorAll('.stat-card, .metric-card, .feature-card, .btn, .logo-icon').forEach(el => {
+    el.style.willChange = 'transform';
+    el.style.transform = 'translateZ(0)';
 });
 
-// Animate Progress Bars on Scroll
+// Reduce motion for accessibility
+if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    document.querySelectorAll('*').forEach(el => {
+        el.style.animation = 'none';
+        el.style.transition = 'none';
+    });
+}// Animate Progress Bars on Scroll
 const observerOptions = {
     threshold: 0.5,
     rootMargin: '0px 0px -100px 0px'
