@@ -5,36 +5,378 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wealth ∞ Wealth - AI Trading Engine</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- iOS-style Lock Screen Hero Section -->
-    <section class="hero-lockscreen">
-        <div class="background-image"></div>
-        <div class="glass-overlay"></div>
-        
-        <div class="lock-content">
-            <div class="time-display">
-                <div class="time" id="currentTime">10:19</div>
-                <div class="date" id="currentDate">Wed 26 Nov</div>
-            </div>
-            
-            <div class="hero-card glass-card">
-                <div class="logo-section">
-                    <div class="logo">∞</div>
-                    <h1>Wealth<span class="highlight">8</span>Wealth</h1>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <div class="logo-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" fill="#00D9A3"/>
+                            <circle cx="8" cy="12" r="2" fill="#00D9A3"/>
+                            <circle cx="16" cy="12" r="2" fill="#00D9A3"/>
+                        </svg>
+                    </div>
+                    <div class="logo-text">
+                        <span class="brand-name">Wealth <span class="infinity">∞</span> Wealth</span>
+                        <span class="tagline">AI TRADING ENGINE</span>
+                    </div>
                 </div>
-                <p class="tagline">AI-Powered Wealth Intelligence Platform</p>
-                <p class="subtitle">Institutional-grade precision for retail traders</p>
-                <div class="cta-buttons">
-                    <button class="btn-primary glass-btn">Start Free Trial</button>
-                    <button class="btn-secondary glass-btn">Learn More</button>
+                <button class="menu-toggle" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div class="nav-links" id="navLinks">
+                    <a href="#features">Features</a>
+                    <a href="#performance">Performance</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#about">About</a>
                 </div>
             </div>
+        </div>
+    </nav>
 
-            <div class="swipe-indicator">
-                <div class="swipe-bar"></div>
-                <p>Swipe up to explore</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="status-badge">
+                🔵 LIVE: 99.9% Uptime • 2.1ms Avg Latency
             </div>
+            <h1 class="hero-title">
+                Trade ahead of<br>the <span class="highlight">curve.</span>
+            </h1>
+            <p class="hero-subtitle">
+                Institutional-grade AI execution, retail-simple.<br>
+                AURORA adapts to market regimes faster than<br>
+                human traders—with millisecond precision<br>
+                and zero emotional bias.
+            </p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary">
+                    Launch Terminal 🚀
+                </button>
+                <button class="btn btn-secondary">
+                    See Live Metrics
+                </button>
+            </div>
+            <div class="hero-features">
+                <div class="feature-badge">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="8" fill="#4A90E2"/>
+                        <path d="M6 8l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>No credit card required</span>
+                </div>
+                <div class="feature-badge">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="8" fill="#4A90E2"/>
+                        <path d="M6 8l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>14-day free trial</span>
+                </div>
+                <div class="feature-badge">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <circle cx="8" cy="8" r="8" fill="#4A90E2"/>
+                        <path d="M6 8l2 2 4-4" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <span>Cancel anytime</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">2.1ms</div>
+                    <div class="stat-label">Avg Latency</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">99.9%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">24/7</div>
+                    <div class="stat-label">Support</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">256-bit</div>
+                    <div class="stat-label">Encryption</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Performance Metrics -->
+    <section class="performance-section" id="performance">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">PERFORMANCE DATA</span>
+                <h2 class="section-title">Numbers that <span class="highlight">matter</span></h2>
+                <p class="section-subtitle">Real-time metrics from live trading environments. Every number is verifiable, every calculation is transparent.</p>
+            </div>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="metric-info">
+                        <div class="metric-label">Avg Execution Time</div>
+                        <div class="metric-value">2.1ms</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M3 3v18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M7 12l4-4 4 4 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="metric-info">
+                        <div class="metric-label">Sharpe Ratio (12mo)</div>
+                        <div class="metric-value">2.47</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="metric-info">
+                        <div class="metric-label">Fill Success Rate</div>
+                        <div class="metric-value">94.3%</div>
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-icon blue">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="metric-info">
+                        <div class="metric-label">Max Drawdown</div>
+                        <div class="metric-value">8.2%</div>
+                    </div>
+                </div>
+            </div>
+            <div class="performance-cards">
+                <div class="perf-card">
+                    <div class="perf-icon">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <rect width="32" height="32" rx="8" fill="#4A90E2" opacity="0.2"/>
+                            <path d="M16 8v16m-4-4l4 4 4-4" stroke="#4A90E2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Real-time Performance</h3>
+                    <p>Live market adaptation</p>
+                    <div class="perf-grid">
+                        <div class="perf-stat">
+                            <div class="perf-stat-value">2.47</div>
+                            <div class="perf-stat-label">Sharpe Ratio</div>
+                        </div>
+                        <div class="perf-stat">
+                            <div class="perf-stat-value">8.2%</div>
+                            <div class="perf-stat-label">Max Drawdown</div>
+                        </div>
+                        <div class="perf-stat">
+                            <div class="perf-stat-value">94.3%</div>
+                            <div class="perf-stat-label">Fill Success</div>
+                        </div>
+                        <div class="perf-stat">
+                            <div class="perf-stat-value">2.1ms</div>
+                            <div class="perf-stat-label">Avg Latency</div>
+                        </div>
+                    </div>
+                    <div class="audit-badge">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 0C4.48 0 0 4.48 0 10s4.48 10 10 10 10-4.48 10-10S15.52 0 10 0z" fill="#00D9A3" opacity="0.2"/>
+                            <path d="M7 10l2 2 4-4" stroke="#00D9A3" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <span>Every trade decision is auditable. Encrypted, logged, and compliance-ready.</span>
+                    </div>
+                </div>
+            </div>
+            <a href="#methodology" class="view-methodology">View Methodology →</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Built for <span class="highlight">precision</span></h2>
+                <p class="section-subtitle">Four core capabilities that separate AURORA from conventional trading systems.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="6" fill="currentColor"/>
+                            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h3>Alpha Discovery</h3>
+                    <p>Signals adapt faster than regimes shift.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon teal">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 8v8l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Adaptive Risk</h3>
+                    <p>Dynamic position sizing based on market volatility.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon blue">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M8 16l8-8 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M8 24l8-8 8 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Millisecond Routing</h3>
+                    <p>Smart order placement with latency guardrails.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon teal">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M9 16l4 4 10-10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <rect x="6" y="6" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>Guardrails & Audit</h3>
+                    <p>Every decision, signed and traceable.</p>
+                </div>
+            </div>
+            <a href="#all-features" class="explore-link">Explore all features in detail →</a>
+        </div>
+    </section>
+
+    <!-- Security & Trust Section -->
+    <section class="security-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">SECURITY & COMPLIANCE</span>
+                <h2 class="section-title">Built on <span class="highlight">trust</span></h2>
+                <p class="section-subtitle">Enterprise-grade security and compliance guardrails. Every decision auditable, every connection encrypted.</p>
+            </div>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="security-icon blue">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 4L6 9v7c0 6.075 4.2 11.75 10 13 5.8-1.25 10-6.925 10-13V9l-10-5z" stroke="currentColor" stroke-width="2" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3>End-to-End Encryption</h3>
+                    <p>AES-256 for data at rest, TLS 1.3 for all transmissions</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon teal">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="12" r="4" stroke="currentColor" stroke-width="2"/>
+                            <path d="M10 26v-2c0-3.3 2.7-6 6-6s6 2.7 6 6v2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>Zero-Knowledge Architecture</h3>
+                    <p>Your API keys and credentials never touch our servers</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon blue">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M6 14h20M6 18h20M10 10h12c2.2 0 4 1.8 4 4v8c0 2.2-1.8 4-4 4H10c-2.2 0-4-1.8-4-4v-8c0-2.2 1.8-4 4-4z" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Complete Audit Trail</h3>
+                    <p>Every decision logged with cryptographic signatures</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon teal">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M28 10V6a2 2 0 00-2-2H6a2 2 0 00-2 2v4M4 22v4a2 2 0 002 2h20a2 2 0 002-2v-4" stroke="currentColor" stroke-width="2"/>
+                            <rect x="10" y="12" width="12" height="8" rx="1" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Regulatory Ready</h3>
+                    <p>Built to meet institutional compliance standards</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon blue">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <path d="M16 2L2 9l14 7 14-7-14-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                            <path d="M2 23l14 7 14-7M2 16l14 7 14-7" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Redundant Systems</h3>
+                    <p>Multi-region backup with instant failover capability</p>
+                </div>
+                <div class="security-card">
+                    <div class="security-icon teal">
+                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <circle cx="16" cy="16" r="12" stroke="currentColor" stroke-width="2"/>
+                            <path d="M16 8v8l4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3>24/7 Threat Detection</h3>
+                    <p>Real-time monitoring with automated incident response</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Status -->
+    <section class="status-section">
+        <div class="container">
+            <div class="status-card">
+                <h2>Live System Status</h2>
+                <div class="status-grid">
+                    <div class="status-item">
+                        <div class="status-value">99.9%</div>
+                        <div class="status-label">Uptime</div>
+                    </div>
+                    <div class="status-item">
+                        <div class="status-value">24/7</div>
+                        <div class="status-label">Monitoring</div>
+                    </div>
+                </div>
+                <div class="progress-bars">
+                    <div class="progress-item">
+                        <div class="progress-label">Signal Accuracy</div>
+                        <div class="progress-value">87.2%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 87.2%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label">Risk Control</div>
+                        <div class="progress-value">92.5%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 92.5%"></div>
+                        </div>
+                    </div>
+                    <div class="progress-item">
+                        <div class="progress-label">Execution Quality</div>
+                        <div class="progress-value">94.3%</div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 94.3%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="disclaimer">
+                    ⚠️ Past performance does not guarantee future results. All metrics based on historical and live trading data. Full methodology available on request.
+                </div>
+            <            </div>
         </div>
     </section>
 
