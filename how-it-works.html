@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How Wealth8Wealth Works — Architecture & Methodology</title>
+  <meta name="description" content="See how Wealth8Wealth discovers alpha, manages risk, and executes trades with institution-grade precision." />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="/assets/styles.css" rel="stylesheet" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "How Wealth8Wealth Works",
+    "description": "Deep dive into our signal engine, risk layer, and low-latency execution stack.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Wealth8Wealth",
+      "url": "https://wealth8wealth.com"
+    }
+  }
+  </script>
+</head>
+
+<body class="antialiased text-gray-800">
+
+  <!-- HEADER -->
+  <header class="border-b bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <a href="/" class="flex items-center gap-3"><img src="/assets/logo.svg" class="h-8" alt="Wealth8Wealth"><span class="font-semibold text-lg">Wealth8Wealth</span></a>
+      <nav class="hidden md:flex gap-6 text-sm">
+        <a href="/how-it-works.html" class="font-semibold">How it works</a>
+        <a href="/features.html">Features</a>
+        <a href="/pricing.html">Pricing</a>
+        <a href="/blog.html">Blog</a>
+        <a href="/login.html" class="border px-3 py-2 rounded-md">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h1 class="text-4xl font-bold">How Wealth8Wealth Works</h1>
+        <p class="mt-4 text-gray-600 text-lg">A transparent breakdown of our signal engine, risk layer, and execution pipeline — built for institutional reliability.</p>
+      </div>
+      <img src="/assets/architecture-diagram.png" class="rounded-xl shadow" alt="architecture diagram placeholder" />
+    </div>
+  </section>
+
+  <!-- 3-STEP SYSTEM -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-2xl font-bold">Three-layer architecture</h2>
+    <div class="mt-10 grid md:grid-cols-3 gap-10">
+
+      <div class="p-6 border rounded-xl">
+        <h3 class="font-semibold text-lg">1. Signal Engine</h3>
+        <p class="mt-2 text-sm text-gray-600">Processes market data in real-time using feature stacks, anomaly detection, and neural signal scoring pipelines. Generates long/short bias and conviction.</p>
+      </div>
+
+      <div class="p-6 border rounded-xl">
+        <h3 class="font-semibold text-lg">2. Risk Layer</h3>
+        <p class="mt-2 text-sm text-gray-600">Applies adaptive risk scaling, volatility filters, max drawdown tripwires, and portfolio exposure constraints.</p>
+      </div>
+
+      <div class="p-6 border rounded-xl">
+        <h3 class="font-semibold text-lg">3. Execution Engine</h3>
+        <p class="mt-2 text-sm text-gray-600">Smart order routing with liquidity-aware decisioning, slippage estimation, and sub-10ms dispatch.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PIPELINE DIAGRAM -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-2xl font-bold">Full pipeline — Data → Model → Execution → Audit</h2>
+      <p class="mt-2 text-gray-600 text-sm">End-to-end transparency into how decisions are formed and delivered.</p>
+      <img src="/assets/pipeline-diagram.png" class="mt-8 rounded-xl border shadow" alt="pipeline diagram" />
+    </div>
+  </section>
+
+  <!-- WHITEPAPER SHORT VERSION -->
+  <section class="max-w-7xl mx-auto px-4 py-16">
+    <h2 class="text-2xl font-bold">Technical whitepaper (summary)</h2>
+    <p class="mt-4 text-gray-700 text-sm leading-relaxed">
+      Wealth8Wealth operates on a modular AI stack built around real-time feature engineering, ensemble-based signal voting, context-aware risk throttling, and distributed execution microservices. Each component publishes audit logs to ensure full traceability. For compliance, the system supports replayable decision paths with timestamped reasoning checkpoints.
+    </p>
+    <a href="/assets/whitepaper.pdf" class="inline-block mt-6 px-5 py-3 bg-black text-white rounded-xl">Download full whitepaper</a>
+  </section>
+
+  <!-- CTA -->
+  <section class="max-w-7xl mx-auto px-4 py-12">
+    <div class="bg-black text-white rounded-2xl p-10 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div>
+        <h3 class="text-xl font-bold">Experience the system in action</h3>
+        <p class="mt-2 text-gray-300 text-sm">Launch the terminal and explore live demo strategies.</p>
+      </div>
+      <a href="/signup.html" class="px-6 py-3 bg-white text-black rounded-xl font-semibold">Start free trial</a>
+    </div>
+  </section>
+
+  <footer class="border-t py-10 text-center text-sm text-gray-500">
+    © 2025 Wealth8Wealth — All rights reserved.
+  </footer>
+</body>
+</html>
